@@ -79,7 +79,6 @@ async fn main() {
         };
 
         batch_server_list(servers, &tx, &config).await;
-        db::update_stats(&client).await;
     } else {
         let mut last_full_scan = SystemTime::now();
         let mut last_rescan = SystemTime::now();
@@ -129,7 +128,6 @@ async fn main() {
             };
 
             batch_server_list(servers, &tx, &config).await;
-            db::update_stats(&client).await;
         }
     }
 }
