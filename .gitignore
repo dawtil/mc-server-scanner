@@ -1,2 +1,3 @@
 /target
 /masscan/masscan-output.txt
+.env

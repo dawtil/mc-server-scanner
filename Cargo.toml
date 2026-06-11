@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+dotenv = "0.15.0"
 futures = "0.3.31"
 humantime = "2.3.0"
 maxminddb = "0.26.0"
