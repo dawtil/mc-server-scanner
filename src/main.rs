@@ -405,7 +405,7 @@ async fn join_scan(addr: SocketAddr, protocol: i32) -> Option<ServerJoinInfo> {
         .await
         .ok()?;
 
-    let username = b"scanner";
+    let username = b"joe";
 
     let login_start_fields = match protocol {
         protocol if protocol <= 758 => &util::prefix_len(username),
@@ -414,7 +414,7 @@ async fn join_scan(addr: SocketAddr, protocol: i32) -> Option<ServerJoinInfo> {
         protocol if protocol <= 763 => &[&util::prefix_len(username)[..], &[0x00]].concat(),
         _ => &[
             &util::prefix_len(username)[..],
-            &0xe0ce739bab603be2b9dfd45dcee616a2_u128.to_be_bytes(),
+            &0x473e7dc1820532a3835a7cdf14a39430_u128.to_be_bytes(),
         ]
         .concat(),
     };

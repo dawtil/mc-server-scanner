@@ -1,7 +1,6 @@
 use std::{
     net::{IpAddr, SocketAddr},
     sync::Arc,
-    time::{SystemTime, UNIX_EPOCH},
 };
 use tokio::sync::mpsc::Receiver;
 use tokio_postgres::Client;
